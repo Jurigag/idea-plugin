@@ -42,6 +42,7 @@
         <completion.contributor language="Zephir" implementationClass="com.zephir.completion.ZephirKeywordCompletionContributor"/>
         <internalFileTemplate name="Zephir Class"/>
         <internalFileTemplate name="Zephir Interface"/>
+        <applicationConfigurable groupId="tools" displayName="Zephir Plugin" id="preferences.ZephirConfigurable" instance="com.zephir.ZephirConfigurable" />
     </extensions>
 
     <application-components>

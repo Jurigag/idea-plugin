@@ -11,28 +11,27 @@ import java.util.Objects;
 
 public class ZephirFileManager extends FileDocumentManagerAdapter {
     protected String parserOutput;
-    protected VirtualFile currentFile;
+    private VirtualFile currentFile;
 
     @Override
     public void beforeDocumentSaving(@NotNull Document document) {
         currentFile = FileDocumentManager.getInstance().getFile(document);
         if (currentFile != null) {
             if (Objects.equals(currentFile.getExtension(), "zep")) {
-                if(!checkFile()) {
+                if (!checkFile()) {
                     processError();
-                };
+                }
+                ;
             }
         }
         super.beforeDocumentSaving(document);
     }
 
-    private boolean checkFile()
-    {
+    private boolean checkFile() {
         String path = currentFile.getPath();
     }
 
-    private void processError()
-    {
+    private void processError() {
 
     }
 }
